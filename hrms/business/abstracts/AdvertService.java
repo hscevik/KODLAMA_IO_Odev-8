@@ -10,6 +10,6 @@ public interface AdvertService {
 
 	DataResult<List<Advert>>  getAdvertAll();
 	Result addAdvert(Advert advert);
-	DataResult<List<Advert>>  getAllByIsActiveTrue();
+	DataResult<List<Advert>>  getAllByActiveTrue();
 
 }
