@@ -8,7 +8,8 @@ import com.hrms.hrms.entities.concretes.Advert;
 
 public interface AdvertService {
 
-	DataResult<List<Advert>>  getArvertAll();
+	DataResult<List<Advert>>  getAdvertAll();
 	Result addAdvert(Advert advert);
-	List<Advert> findByActive(boolean activeStatus);
+	DataResult<List<Advert>>  getAllByIsActiveTrue();
+
 }

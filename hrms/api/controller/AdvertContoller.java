@@ -30,14 +30,14 @@ public class AdvertContoller {
 	@GetMapping("/getAll")
 	public DataResult<List<Advert>>  getAll(){
 		
-		return advertService.getArvertAll();
+		return advertService.getAdvertAll();
 		
 	}
 	
 	@GetMapping("getActiveAdvert")
-	public List<Advert> getActiveTrue(){
+	public DataResult<List<Advert>>  getActiveTrue(){
 		
-		return advertService.findByActive(true);
+		return advertService.getAllByIsActiveTrue();
 		
 	}
 	

@@ -26,7 +26,7 @@ public class AdvertManager implements AdvertService{
 
 	
 	@Override
-	public DataResult<List<Advert>> getArvertAll() {
+	public DataResult<List<Advert>> getAdvertAll() {
 		// TODO Auto-generated method stub
 		return new SuccessDataResult<List<Advert>>(advertDao.findAll(), "Data Listelendi.");
 	}
@@ -40,9 +40,18 @@ public class AdvertManager implements AdvertService{
 
 
 	@Override
-	public List<Advert> findByActive(boolean activeStatus) {
+	public DataResult<List<Advert>> getAllByIsActiveTrue() {
 		// TODO Auto-generated method stub
-		return advertDao.findByActive(activeStatus);
+		return new SuccessDataResult<List<Advert>>(advertDao.getAllByIsActiveTrue(), "Data Listelendi.");
 	}
+
+
+	
+
+
+
+
+	
+	
 
 }
